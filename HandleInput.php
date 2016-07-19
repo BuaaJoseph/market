@@ -19,6 +19,16 @@ class HandleInput extends GoodsInfo{
     }
 
     /**
+     * 外部接口
+     * 输出商品列表
+     */
+    public function printGoods(){
+        require_once "HandleOutput.php";
+        $printer = new HandleOutput($this->buyResult, $this->threeToTwoResult, $this->nintyFivePercentResult, $this->totalMoney, $this->reduceMoney);
+        $printer->outputGoodslistToWeb();
+    }
+
+    /**
      * 格式化输入为php数组
      * 输入格式举例：[ 'ITEM000001', 'ITEM000003-2', 'ITEM000005', 'ITEM000005', 'ITEM000005' ]
      * 返回值举例：array('ITEM000001' => 1,'ITEM000003'=>2,'ITEM000005'=>3)
