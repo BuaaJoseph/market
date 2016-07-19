@@ -5,6 +5,6 @@
  * Date: 2016/7/19
  * Time: 21:17
  */
-require_once "Goods.php";
-$goods = new Goods();
-$goods->getGoods();
+require_once "HandleInput.php";
+$runner = new HandleInput($_POST['goods']);
+$runner->calculate();

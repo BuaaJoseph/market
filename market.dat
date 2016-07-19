@@ -1,124 +1,138 @@
 {
-"ALL_GOODS": {
-"ITEM000001": {
-"barcode": "ITEM000001",
-"name": "可口可乐",
-"unit": "瓶",
-"category": "食品",
-"subCategory": "碳酸饮料",
-"price": 3
-},
-"ITEM000002": {
-"barcode": "ITEM000002",
-"name": "雪碧",
-"unit": "瓶",
-"category": "食品",
-"subCategory": "碳酸饮料",
-"price": 3.5
-},
-"ITEM000003": {
-"barcode": "ITEM000003",
-"name": "芬达",
-"unit": "瓶",
-"category": "食品",
-"subCategory": "碳酸饮料",
-"price": 2.8
-},
-"ITEM000004": {
-"barcode": "ITEM000004",
-"name": "健力宝",
-"unit": "瓶",
-"category": "食品",
-"subCategory": "碳酸饮料",
-"price": 4
-},
-"ITEM000005": {
-"barcode": "ITEM000005",
-"name": "味全",
-"unit": "瓶",
-"category": "食品",
-"subCategory": "乳酸饮料",
-"price": 6.5
-},
-"ITEM000006": {
-"barcode": "ITEM000006",
-"name": "苹果",
-"unit": "斤",
-"category": "食品",
-"subCategory": "水果",
-"price": 5
-},
-"ITEM000007": {
-"barcode": "ITEM000007",
-"name": "樱桃",
-"unit": "斤",
-"category": "食品",
-"subCategory": "水果",
-"price": 10
-},
-"ITEM000008": {
-"barcode": "ITEM000008",
-"name": "香蕉",
-"unit": "斤",
-"category": "食品",
-"subCategory": "水果",
-"price": 3.4
-},
-"ITEM000009": {
-"barcode": "ITEM000009",
-"name": "心心相印纸巾",
-"unit": "包",
-"category": "日用品",
-"subCategory": "纸巾",
-"price": 5.5
-},
-"ITEM000010": {
-"barcode": "ITEM000010",
-"name": "羽毛球",
-"unit": "个",
-"category": "体育用品",
-"subCategory": "球类",
-"price": 1.5
-},
-"ITEM000011": {
-"barcode": "ITEM000011",
-"name": "小浣熊干脆面",
-"unit": "袋",
-"category": "食品",
-"subCategory": "速食",
-"price": 1.1
-},
-"ITEM000012": {
-"barcode": "ITEM000012",
-"name": "油桃",
-"unit": "斤",
-"category": "食品",
-"subCategory": "水果",
-"price": 6.8
-},
-"ITEM000013": {
-"barcode": "ITEM000013",
-"name": "足球",
-"unit": "个",
-"category": "体育用品",
-"subCategory": "球类",
-"price": 68
-},
-"ITEM000014": {
-"barcode": "ITEM000014",
-"name": "篮球",
-"unit": "个",
-"category": "体育用品",
-"subCategory": "球类",
-"price": 108
-},
-"ITEM000015": {
-"barcode": "ITEM000015",
-"name": "乒乓球",
-"unit": "个",
-"category": "体育用品",
-"subCategory": "球类",
-"price": 1.2
-}
-}
+    "ALL_GOODS": {
+        "ITEM000001": {
+            "barcode": "ITEM000001",
+            "name": "可口可乐",
+            "unit": "瓶",
+            "category": "食品",
+            "subCategory": "碳酸饮料",
+            "price": 3
+        },
+        "ITEM000002": {
+            "barcode": "ITEM000002",
+            "name": "雪碧",
+            "unit": "瓶",
+            "category": "食品",
+            "subCategory": "碳酸饮料",
+            "price": 3.5
+        },
+        "ITEM000003": {
+            "barcode": "ITEM000003",
+            "name": "芬达",
+            "unit": "瓶",
+            "category": "食品",
+            "subCategory": "碳酸饮料",
+            "price": 2.8
+        },
+        "ITEM000004": {
+            "barcode": "ITEM000004",
+            "name": "健力宝",
+            "unit": "瓶",
+            "category": "食品",
+            "subCategory": "碳酸饮料",
+            "price": 4
+        },
+        "ITEM000005": {
+            "barcode": "ITEM000005",
+            "name": "味全",
+            "unit": "瓶",
+            "category": "食品",
+            "subCategory": "乳酸饮料",
+            "price": 6.5
+        },
+        "ITEM000006": {
+            "barcode": "ITEM000006",
+            "name": "苹果",
+            "unit": "斤",
+            "category": "食品",
+            "subCategory": "水果",
+            "price": 5
+        },
+        "ITEM000007": {
+            "barcode": "ITEM000007",
+            "name": "樱桃",
+            "unit": "斤",
+            "category": "食品",
+            "subCategory": "水果",
+            "price": 10
+        },
+        "ITEM000008": {
+            "barcode": "ITEM000008",
+            "name": "香蕉",
+            "unit": "斤",
+            "category": "食品",
+            "subCategory": "水果",
+            "price": 3.4
+        },
+        "ITEM000009": {
+            "barcode": "ITEM000009",
+            "name": "心心相印纸巾",
+            "unit": "包",
+            "category": "日用品",
+            "subCategory": "纸巾",
+            "price": 5.5
+        },
+        "ITEM000010": {
+            "barcode": "ITEM000010",
+            "name": "羽毛球",
+            "unit": "个",
+            "category": "体育用品",
+            "subCategory": "球类",
+            "price": 1.5
+        },
+        "ITEM000011": {
+            "barcode": "ITEM000011",
+            "name": "小浣熊干脆面",
+            "unit": "袋",
+            "category": "食品",
+            "subCategory": "速食",
+            "price": 1.1
+        },
+        "ITEM000012": {
+            "barcode": "ITEM000012",
+            "name": "油桃",
+            "unit": "斤",
+            "category": "食品",
+            "subCategory": "水果",
+            "price": 6.8
+        },
+        "ITEM000013": {
+            "barcode": "ITEM000013",
+            "name": "足球",
+            "unit": "个",
+            "category": "体育用品",
+            "subCategory": "球类",
+            "price": 68
+        },
+        "ITEM000014": {
+            "barcode": "ITEM000014",
+            "name": "篮球",
+            "unit": "个",
+            "category": "体育用品",
+            "subCategory": "球类",
+            "price": 108
+        },
+        "ITEM000015": {
+            "barcode": "ITEM000015",
+            "name": "乒乓球",
+            "unit": "个",
+            "category": "体育用品",
+            "subCategory": "球类",
+            "price": 1.2
+        }
+    },
+    "THREE_TO_TWO": {
+        "0": "ITEM000001",
+        "1": "ITEM000002",
+        "2": "ITEM000003",
+        "3": "ITEM000004",
+        "4": "ITEM000007",
+        "5": "ITEM000008"
+    },
+     "NINTY_FIVE_PERCENT": {
+        "0": "ITEM000006",
+        "1": "ITEM000008",
+        "2": "ITEM000011",
+        "3": "ITEM000013"
+    }
 }
