@@ -63,6 +63,7 @@ class HandleInput extends GoodsInfo{
             if (in_array($barCode, $this->threeToTwo) && $buyNum > 2){     //优先使用满二减一优惠
                 $reduction = intval($buyNum) / 3;                           //优惠商品个数
                 $line['money'] = sprintf("%.2f", $line['price'] * ($buyNum - $reduction));
+                $line['reduce'] = sprintf("%.2f", $reduction * $line['price']);
 
                 $this->threeToTwoResult[] = array(
                     'name' => $this->allGoods[$barCode]['name'],
@@ -75,9 +76,8 @@ class HandleInput extends GoodsInfo{
             }else{                                                         //该商品不参加优惠
                 $line['money'] = sprintf("%.2f", $line['num'] * $line['num']);
             }
-            $this->totalMoney = sprintf("%.2f", $this->totalMoney + floatval($line['money']));
-            $this->reduceMoney = sprintf("%.2f", $this->reduceMoney + floatval($line['reduce']));
-
+            $this->totalMoney = sprintf("%.2f", $this->totalMoney + floatval($line['money']));          //计算总价
+            $this->reduceMoney = sprintf("%.2f", $this->reduceMoney + floatval($line['reduce']));       //计算节省总钱数
             $this->buyResult[] = $line;
         }
     }
