@@ -55,16 +55,28 @@ class HandleInput extends GoodsInfo{
                 'barcode' => $barCode,
                 'num' => $buyNum,
                 'price' => sprintf("%.2f", $this->allGoods[$barCode]['price']),
+                'unit' => $this->allGoods[$barCode]['unit'],
+                'money' => 0,
+                'reduce' => 0,
             );
 
             if (in_array($barCode, $this->threeToTwo) && $buyNum > 2){     //优先使用满二减一优惠
                 $reduction = intval($buyNum) / 3;                           //优惠商品个数
                 $line['money'] = sprintf("%.2f", $line['price'] * ($buyNum - $reduction));
+
+                $this->threeToTwoResult[] = array(
+                    'name' => $this->allGoods[$barCode]['name'],
+                    'num' => $reduction,
+                    'unit' => $this->allGoods[$barCode]['unit'],
+                );
             }elseif(in_array($barCode, $this->nintyFivePercent)){          //载判断是否满足九五折优惠,金额保留两位小数
                 $line['money'] = sprintf("%.2f", $line['num'] * $line['price'] * 0.95);
+                $line['reduce'] = sprintf("%.2f", $line['num'] * $line['price'] * 0.05);
             }else{                                                         //该商品不参加优惠
                 $line['money'] = sprintf("%.2f", $line['num'] * $line['num']);
             }
+            $this->totalMoney = sprintf("%.2f", $this->totalMoney + floatval($line['money']));
+            $this->reduceMoney = sprintf("%.2f", $this->reduceMoney + floatval($line['reduce']));
 
             $this->buyResult[] = $line;
         }

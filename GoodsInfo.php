@@ -12,7 +12,11 @@ class GoodsInfo{
     protected $nintyFivePercent = array();          //九五折商品条形码
 
     protected $userBuy;                             //用户购买商品条形码清单 string
-    protected $buyResult = array();                 //计算结果
+    protected $buyResult = array();                 //小票结果
+    protected $threeToTwoResult = array();          //满二减一的商品清单
+    protected $nintyFivePercentResult = array();    //九五折商品清单
+    protected $totalMoney = 0;                      //总价
+    protected $reduceMoney = 0;                     //节省总价
 
     /**
      * 类初始化接收用户输入
@@ -28,9 +32,5 @@ class GoodsInfo{
         $this->userBuy = trim($input);
     }
 
-    //获得所有在售的商品信息
-    protected function getGoods(){
-       var_export($this->threeToTwo);
-    }
 
 }
