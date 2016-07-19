@@ -7,11 +7,12 @@
  */
 
 class GoodsInfo{
-    protected $allGoods = array();                     //所有商品
-    protected $threeToTwo = array();              //满二减一商品条形码
-    protected $nintyFivePercent = array();        //九五折商品条形码
+    protected $allGoods = array();                  //所有商品
+    protected $threeToTwo = array();                //满二减一商品条形码
+    protected $nintyFivePercent = array();          //九五折商品条形码
 
-    protected $userBuy;                     //用户购买商品条形码清单 string
+    protected $userBuy;                             //用户购买商品条形码清单 string
+    protected $buyResult = array();                 //计算结果
 
     /**
      * 类初始化接收用户输入

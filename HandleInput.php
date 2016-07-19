@@ -14,7 +14,7 @@ class HandleInput extends GoodsInfo{
      */
     public function calculate(){
         $this->formatInput();             //格式化输入
-        var_export($this->formatedInput);
+        $this->calResult();               //计算最终结果
     }
 
     /**
@@ -28,6 +28,7 @@ class HandleInput extends GoodsInfo{
         $barcodeArray = explode(',', $userInput);
 
         foreach ($barcodeArray as $key => $singleBarcode){
+            $singleBarcode = trim($singleBarcode);
             $goodAndNum = explode('-', $singleBarcode);
             $addNum = 1;
             if(count($goodAndNum) == 2){        //'ITEM000003-2'形条形码
@@ -39,6 +40,33 @@ class HandleInput extends GoodsInfo{
             }else{
                 $this->formatedInput[$goodAndNum[0]] = 1;
             }
+        }
+    }
+
+
+    /**
+     * 计算最终输出小票数据
+     * 核心逻辑
+     */
+    private function calResult(){
+        foreach ($this->formatedInput as $barCode => $buyNum){
+            $line = array(
+                'name' => $this->allGoods[$barCode]['name'],
+                'barcode' => $barCode,
+                'num' => $buyNum,
+                'price' => sprintf("%.2f", $this->allGoods[$barCode]['price']),
+            );
+
+            if (in_array($barCode, $this->threeToTwo) && $buyNum > 2){     //优先使用满二减一优惠
+                $reduction = intval($buyNum) / 3;                           //优惠商品个数
+                $line['money'] = sprintf("%.2f", $line['price'] * ($buyNum - $reduction));
+            }elseif(in_array($barCode, $this->nintyFivePercent)){          //载判断是否满足九五折优惠,金额保留两位小数
+                $line['money'] = sprintf("%.2f", $line['num'] * $line['price'] * 0.95);
+            }else{                                                         //该商品不参加优惠
+                $line['money'] = sprintf("%.2f", $line['num'] * $line['num']);
+            }
+
+            $this->buyResult[] = $line;
         }
     }
 
