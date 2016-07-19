@@ -24,7 +24,7 @@ class GoodsInfo{
      * @param $input string 用户输入
      */
     public function __construct($input) {
-        $data = file_get_contents('market.dat');
+        $data = file_get_contents("../data/market.dat");
         $marketInfo = json_decode($data,true);
         $this->allGoods = $marketInfo['ALL_GOODS'];
         $this->threeToTwo = $marketInfo['THREE_TO_TWO'];

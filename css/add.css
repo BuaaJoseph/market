@@ -1,0 +1,113 @@
+/*后台添加数据(案例，项目等)CSS*/
+.addcase{
+    margin-top:20px;
+    margin-left: 100px;
+}
+
+.addtd{
+    text-align: left;
+}
+
+.caseinput {
+    margin-left: 90px;
+    width: 200px;
+    height: 34px;
+    border: 1px solid #ccc;
+    color: #999;
+}
+
+.showtextarea{
+    margin-left: -20px;
+    width: 200px;
+    border: 1px solid #ccc;
+    color: #999;
+}
+
+.caseselect{
+    margin-left: 90px;
+    width: 200px;
+    height: 36px;
+    border: 1px solid #ccc;
+    color: #999;
+}
+.roomselect{
+    margin-left: 10px;
+    width: 150px;
+    height: 36px;
+    border: 1px solid #ccc;
+    color: #999;
+}
+
+#picselect{
+    margin-left: 90px;
+    width: 118px;
+    height: 36px;
+    border: 1px solid #ccc;
+    color: #999;
+}
+
+.picbtn {
+    margin-left: 20px;
+    width: 78px;
+    height: 30px;
+    border: 1px solid #47a4ee;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #47a4e1;
+}
+
+.casechosepic{
+    margin-left: 30px;
+}
+
+h1{
+    margin-top: 30px;
+    margin-left: 0px;
+    font-size: 26px;
+}
+
+.caseinputpic{
+    margin-left: 30px;
+    width: 120px;
+    height: 36px;
+    border: 2px solid #ccc;
+    text-indent: 15px;
+    color: #999;
+    align: center;
+}
+
+.addcasebtn{
+    margin-left: 86px;
+    width: 78px;
+    height: 36px;
+    border: 1px solid #47a4ee;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #fff;
+    background-color:dodgerblue;
+}
+
+.submit{
+    margin-top:15px;
+    margin-left: 500px;
+}
+
+#fileinput{
+    margin-left: 60px;
+}
+
+
+
+/*项目*/
+#additembtn{
+    margin-top:30px;
+    margin-left: 500px;
+    width: 88px;
+    height: 40px;
+    border: 1px solid #47a4ee;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #fff;
+    background-color:dodgerblue;
+}

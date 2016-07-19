@@ -37,7 +37,7 @@ class HandleOutput{
         $this->nintyFivePercentResult = $nintyFivePercentResult;
         $this->totalMoney = $totalMoney;
         $this->reduceMoney = $reduceMoney;
-        $data = file_get_contents('market.dat');
+        $data = file_get_contents('../data/market.dat');
         $marketInfo = json_decode($data,true);
         $this->allGoods = $marketInfo['ALL_GOODS'];
         $this->threeToTwo = $marketInfo['THREE_TO_TWO'];
