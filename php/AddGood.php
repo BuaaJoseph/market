@@ -6,5 +6,20 @@
  * Time: 1:31
  */
 require_once "GoodsConfig.php";
+$type = $_POST['type'];
 $runner = new GoodsConfig();
-$runner->addGood($_POST);
+switch ($type){
+    case 0:     //添加商品
+        $runner->addGood($_POST);
+        break;
+    case 1:     //添加满二赠一优惠
+        $runner->addThreeToTwo($_POST['barcode']);
+        break;
+    case 2:     //添加九五折优惠
+        $runner->addNintyFive($_POST['barcode']);
+        break;
+    default:
+        echo "输入错误！";
+        break;
+}
+
