@@ -15,6 +15,7 @@ class HandleInput extends GoodsInfo{
     public function calculate(){
         $this->formatInput();             //格式化输入
         $this->calResult();               //计算最终结果
+        $this->outputResult();             //输出结果
     }
 
     /**
@@ -61,7 +62,7 @@ class HandleInput extends GoodsInfo{
             );
 
             if (in_array($barCode, $this->threeToTwo) && $buyNum > 2){     //优先使用满二减一优惠
-                $reduction = intval($buyNum) / 3;                           //优惠商品个数
+                $reduction = floor(intval($buyNum) / 3);                           //优惠商品个数
                 $line['money'] = sprintf("%.2f", $line['price'] * ($buyNum - $reduction));
                 $singleReduce = sprintf("%.2f", $reduction * $line['price']);
 
@@ -77,10 +78,20 @@ class HandleInput extends GoodsInfo{
             }else{                                                         //该商品不参加优惠
                 $line['money'] = sprintf("%.2f", $line['num'] * $line['num']);
             }
-            $this->totalMoney = sprintf("%.2f", $this->totalMoney + floatval($singleReduce));          //计算总价
+            $this->totalMoney = sprintf("%.2f", $this->totalMoney + floatval($line['money']));          //计算总价
             $this->reduceMoney = sprintf("%.2f", $this->reduceMoney + floatval($singleReduce));       //计算节省总钱数
             $this->buyResult[] = $line;
         }
+    }
+
+
+    /**
+     * 输出函数
+     */
+    private function outputResult(){
+        require_once "HandleOutput.php";
+        $printer = new HandleOutput($this->buyResult, $this->threeToTwoResult, $this->nintyFivePercentResult, $this->totalMoney, $this->reduceMoney);
+        $printer->outputToWeb();
     }
 
 }

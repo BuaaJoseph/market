@@ -7,9 +7,32 @@
  */
 
 require_once "GoodsInfo.php";
-class HandleOutput extends GoodsInfo{
+class HandleOutput{
     protected $outputStr = '';
     protected $changeLine = "{changeLine}";     //换行符替换字符串,网页和控制台换行符不一样
+
+    protected $buyResult = array();                 //小票结果
+    protected $threeToTwoResult = array();          //满二减一的商品清单
+    protected $nintyFivePercentResult = array();    //九五折商品清单
+    protected $totalMoney = 0;                      //总价
+    protected $reduceMoney = 0;                     //节省总价
+
+
+    /**
+     * HandleOutput constructor.
+     * @param $buyResult array 用户小票商品信息
+     * @param $threeToTwoResult array 满二赠一商品信息
+     * @param $nintyFivePercentResult array 九五折商品信息
+     * @param $totalMoney float 总价
+     * @param $reduceMoney float 节约金额
+     */
+    public function __construct($buyResult, $threeToTwoResult, $nintyFivePercentResult, $totalMoney, $reduceMoney){
+        $this->buyResult = $buyResult;
+        $this->threeToTwoResult = $threeToTwoResult;
+        $this->nintyFivePercentResult = $nintyFivePercentResult;
+        $this->totalMoney = $totalMoney;
+        $this->reduceMoney = $reduceMoney;
+    }
 
     /**
      * 输出到网页
@@ -45,7 +68,7 @@ class HandleOutput extends GoodsInfo{
             }
             $this->outputStr = $this->outputStr . $this->changeLine;
         }
-        $this->outputStr = $this->outputStr . "--------------------------------------------" . $this->changeLine;
+        $this->outputStr = $this->outputStr . "--------------------------------------------------------------------" . $this->changeLine;
 
         //输出满二减一减免信息
         if (count($this->threeToTwoResult) != 0){
@@ -53,7 +76,7 @@ class HandleOutput extends GoodsInfo{
             foreach ($this->threeToTwoResult as $value){
                 $this->outputStr = $this->outputStr . "名称：{$value['name']}，数量：{$value['num']}{$value['unit']}" . $this->changeLine;
             }
-            $this->outputStr = $this->outputStr . "--------------------------------------------" . $this->changeLine;
+            $this->outputStr = $this->outputStr . "--------------------------------------------------------------------" . $this->changeLine;
         }
 
         //输出统计信息
