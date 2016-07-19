@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="show.css">
+    <title>ThoughWorks-数据输入</title>
+</head>
+<body>
+   <!-- <h2>说明：</h2>
+    <p>1、商店的货品相应设置在cofig.php中进行设置；</p>
+    <p>2、目前商店出售的商品信息如下：</p>
+    <p class="good">( 'barcode' => 'ITEM000001', 'name' => '可口可乐', 'unit' => '瓶', 'category' => '食品', 'subCategory' => '碳酸饮料', 'price' => 3.00 )</p>
+    <p class="good">( 'barcode' => 'ITEM000002', 'name' => '雪碧', 'unit' => '瓶', 'category' => '食品', 'subCategory' => '碳酸饮料', 'price' => 3.50 )</p>
+    <p class="good">( 'barcode' => 'ITEM000003', 'name' => '芬达', 'unit' => '瓶', 'category' => '食品', 'subCategory' => '碳酸饮料', 'price' => 2.80 )</p>
+    <p class="good">( 'barcode' => 'ITEM000004', 'name' => '健力宝', 'unit' => '瓶', 'category' => '食品', 'subCategory' => '碳酸饮料', 'price' => 4.00 )</p>
+    <p class="good">( 'barcode' => 'ITEM000005', 'name' => '味全', 'unit' => '瓶', 'category' => '食品', 'subCategory' => '乳酸饮料', 'price' => 6.50 )</p>
+    <p class="good">( 'barcode' => 'ITEM000006', 'name' => '苹果', 'unit' => '斤', 'category' => '食品', 'subCategory' => '水果', 'price' => 5.00 )</p>
+    <p class="good">( 'barcode' => 'ITEM000007', 'name' => '樱桃', 'unit' => '斤', 'category' => '食品', 'subCategory' => '水果', 'price' => 10.00 )</p>
+    <p class="good">( 'barcode' => 'ITEM000008', 'name' => '香蕉', 'unit' => '斤', 'category' => '食品', 'subCategory' => '水果', 'price' => 3.40 )</p>
+    <p class="good">( 'barcode' => 'ITEM000009', 'name' => '心心相印纸巾', 'unit' => '包', 'category' => '日用品', 'subCategory' => '纸巾', 'price' => 5.50 )</p>
+    <p class="good">( 'barcode' => 'ITEM000010', 'name' => '羽毛球', 'unit' => '个', 'category' => '体育用品', 'subCategory' => '球类', 'price' => 1.50 )</p>
+    <p class="good">( 'barcode' => 'ITEM000011', 'name' => '小浣熊干脆面', 'unit' => '袋', 'category' => '食品', 'subCategory' => '速食', 'price' => 1.10 )</p>
+    <p class="good">( 'barcode' => 'ITEM000012', 'name' => '油桃', 'unit' => '斤', 'category' => '食品', 'subCategory' => '水果', 'price' => 6.80 )</p>
+    <p class="good">( 'barcode' => 'ITEM000013', 'name' => '足球', 'unit' => '个', 'category' => '体育用品', 'subCategory' => '球类', 'price' => 68.00 )</p>
+    <p class="good">( 'barcode' => 'ITEM000014', 'name' => '篮球', 'unit' => '个', 'category' => '体育用品', 'subCategory' => '球类', 'price' => 108.00 )</p>
+    <p class="good">( 'barcode' => 'ITEM000015', 'name' => '乒乓球', 'unit' => '个', 'category' => '体育用品', 'subCategory' => '球类', 'price' => 1.20 )</p>
+    <p>3、目前优惠商品条形码有：'ITEM000001',  'ITEM000002', 'ITEM000003','ITEM000004','ITEM000007','ITEM000008'</p>-->
+    <p>请在下面的输入框中输入题目中的输入格式，格式参考： [ 'ITEM000001', 'ITEM000001', 'ITEM000001', 'ITEM000001', 'ITEM000001', 'ITEM000003-2', 'ITEM000005', 'ITEM000005', 'ITEM000005' ]</p>
+    <form action="Index.php" method="post">
+        <input type="text"  name="goods" style="width: 75%" placeholder="输入购买物品JSON，例如： [ 'ITEM000001', 'ITEM000001', 'ITEM000001', 'ITEM000001', 'ITEM000001', 'ITEM000003-2', 'ITEM000005', 'ITEM000005', 'ITEM000005' ]"/>
+        <input type="submit" />
+    </form>
+</body>
+</html>
