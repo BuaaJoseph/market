@@ -7,6 +7,7 @@
  */
 require_once "GoodsConfig.php";
 $type = $_POST['type'];
+echo $type;
 $runner = new GoodsConfig();
 switch ($type){
     case 0:     //添加商品
