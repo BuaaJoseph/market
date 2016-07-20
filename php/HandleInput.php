@@ -5,6 +5,7 @@
  * Date: 2016/7/19
  * Time: 21:18
  */
+header("content-Type: text/html; charset=Utf-8");
 require_once "GoodsInfo.php";
 class HandleInput extends GoodsInfo{
     protected $formatedInput = array();     //格式化为数组之后的用户输入

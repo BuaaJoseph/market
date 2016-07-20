@@ -5,7 +5,7 @@
  * Date: 2016/7/19
  * Time: 18:08
  */
-
+header("content-Type: text/html; charset=Utf-8");
 class GoodsInfo{
     protected $allGoods = array();                  //所有商品
     protected $threeToTwo = array();                //满二减一商品条形码

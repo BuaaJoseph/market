@@ -5,7 +5,7 @@
  * Date: 2016/7/20
  * Time: 1:34
  */
-
+header("content-Type: text/html; charset=Utf-8");
 class GoodsConfig{
 
     //添加商品

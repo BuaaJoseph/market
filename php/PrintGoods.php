@@ -5,6 +5,7 @@
  * Date: 2016/7/20
  * Time: 0:44
  */
+ header("content-Type: text/html; charset=Utf-8");
 require_once "HandleInput.php";
 $runner = new HandleInput($_POST['goods']);
 $runner->printGoods();

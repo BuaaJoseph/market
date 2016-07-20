@@ -5,6 +5,7 @@
  * Date: 2016/7/20
  * Time: 1:31
  */
+header("content-Type: text/html; charset=Utf-8");
 require_once "GoodsConfig.php";
 $type = $_POST['type'];
 echo $type;

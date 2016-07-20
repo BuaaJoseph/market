@@ -5,7 +5,7 @@
  * Date: 2016/7/19
  * Time: 22:57
  */
-
+header("content-Type: text/html; charset=Utf-8");
 require_once "GoodsInfo.php";
 class HandleOutput{
     protected $outputStr = '';
